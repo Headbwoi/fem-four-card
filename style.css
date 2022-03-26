@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+/*resets*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*colors*/
+:root{
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: var(--Very-Light-Gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+h1 span{
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+h2,h3,h4,h5{
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+p{
+  color: var(--Grayish-Blue);
+  line-height: 1.5;
+  font-weight: 200;
+  font-size: 1rem;
+}
+header{
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.left,.middle,.right{
+  margin-bottom: 2rem;
+  position: relative;
+}
+.card{
+  position: relative;
+  background: #fff;
+  height: 14rem;
+  width: 19rem;
+  padding: 1.6rem;
+  border-radius: .7rem;    
+  box-shadow: 0px 5px 20px hsla(212, 86%, 64%, 0.2);
+}
+.middle .card:not(:last-child){
+  margin-bottom: 2rem;
+}
+.card p{
+  font-size: .8rem;
+}
+.card img{
+  display: block;
+  position: absolute;
+  right: 1.6rem;
+  bottom: 1.6rem;
+}
+
+.left .card{
+  border-top: 4px solid var(--Cyan);
+}
+.middle .team{
+  border-top: 4px solid var(--Red);
+}
+.middle .karma{
+  border-top: 4px solid var(--Orange);
+}
+.right .card{
+  border-top: 4px solid var(--Blue);
+}
+@media (min-width: 768px) {
+  header h1{
+    font-size: 3rem;
+  }
+  header p{
+    font-size: .6rem;
+  }
+  main{
+    flex-direction: row;
+  }
+  .left,.middle,.right{
+    margin: 1rem;
+  }
+
+}
+    
+footer{
+  padding: 0;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
